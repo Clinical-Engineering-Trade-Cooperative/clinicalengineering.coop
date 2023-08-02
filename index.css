@@ -1,0 +1,493 @@
+body {
+  font-family: 'Times new roman';
+  display: table-cell;
+  /* stretches total contents to screen */
+  /* vertical-align: middle; */
+  /* background-color: blue; */
+}
+
+
+#OO {
+  position: relative;
+  /* left: -50%; */
+  align-self: center;
+  left: .1vh;
+
+  width: 40vh;
+  /* max-width: 90vw; */
+  height: 40vh;
+  /* max-height: 90vw; */
+}
+
+#OOExit {
+  position: absolute;
+  top: 45%;
+  bottom: 45%;
+  right: 1%;
+  height: 3vh;
+  width: 3vh;
+  text-align: center;
+  font-size: 2vh;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'H H H'
+    /*     'L H R' */
+    /*     'L S R' */
+    'M M M';
+  /* gap: 5px; */
+  /* padding-top: 5vw; */
+  /* padding-bottom: 10vw; */
+  height: 100vh;
+  animation-name: pulsebackground;
+  animation-duration: var(--avtrisec);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: relative;
+  overflow: hidden;
+  /* border: #000000;
+  background-color: aqua; */
+
+}
+
+/* divs of grid container */
+.grid-container>div {
+  text-align: center;
+  width: 100vw;
+  height: auto;
+  /* background-color: red; */
+}
+
+
+.header {
+  grid-area: H;
+  height: 25vh;
+  z-index: 3;
+  /* background-color: #000000; */
+}
+
+.main {
+  grid-area: M;
+  /* display: box;
+  display: inline-flex;
+  box-align: center;
+  align-items: center;
+  justify-content: center; */
+}
+
+
+/* ----DROPDOWN---- */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+}
+
+.dropbtn {
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.dropdown-content button:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* OVERLAY */
+.overlay {
+  color: white;
+  /* text-shadow: 1px 1px 1px white; */
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow-y: auto
+}
+
+.overlay h1 {
+  font-weight: bold;
+  font-size: x-large;
+  text-justify: inter-ideograph;
+}
+
+.overlay h2 {
+  font-size: large;
+  font-weight: bold;
+}
+
+.overlay h3 {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.overlay p {
+  font-size: medium;
+  text-justify: inter-character
+}
+
+.overlay figure {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.overlay img {
+  align-self: center;
+}
+
+.overlaycon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+}
+
+#o0 {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 6;
+  cursor: pointer;
+  margin: auto;
+  overflow-y: auto;
+}
+
+#o1 {
+  position: fixed;
+  display: none;
+  /* SIZE OF OVERLAY 1 */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 5;
+  cursor: pointer;
+  margin: auto;
+  overflow-y: auto;
+}
+
+#o2 {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  cursor: pointer;
+  margin: auto;
+  overflow-y: auto;
+}
+
+#o3 {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  cursor: pointer;
+  margin: auto;
+  overflow-y: auto;
+}
+
+#o4 {
+  position: fixed;
+  display: none;
+  width: 41vh;
+  height: 41vh;
+  max-width: 90vw;
+  max-height: 90vw;
+  top: 34.4vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* border-radius: 50%; */
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 2;
+  cursor: pointer;
+  margin: auto;
+  overflow-y: auto;
+}
+
+#o5 {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  cursor: pointer;
+  margin: auto;
+  overflow-y: auto;
+}
+
+#o6 {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  cursor: pointer;
+  margin: auto;
+  overflow-y: auto;
+}
+
+#o7 {
+  position: fixed;
+  display: none;
+  width: 41vh;
+  height: 41vh;
+  max-width: 90vw;
+  max-height: 90vw;
+  top: 34.4vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* border-radius: 50%; */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+  margin: auto;
+  overflow-y: auto;
+  border-style: ridge;
+  /* position: absolute;
+    top: 30vh;
+    width: auto;
+    max-width: 90vw;
+    height: 65vh;
+    max-height: 90vw;
+    align-self: center;
+    justify-self: center; */
+}
+
+/* OVERLAY CONTENTS */
+
+#o0con {
+  /* font-size: 50px;
+  color: white; */
+  width: 80%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  overflow-y: auto;
+}
+
+#o1con {
+  width: 90%;
+  height: 90%;
+  /* font-size: 50px;
+  color: white; */
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  overflow-y: scroll;
+}
+
+#o2con {
+  width: 90%;
+  height: 90%;
+  /* font-size: 50px;
+  color: white; */
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  overflow-y: scroll;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.flexbox>div {
+  background-color: none;
+  width: 30%;
+  margin: 10px;
+  height: auto;
+  justify-content: center;
+}
+
+.flexbox img {
+  width: 30%;
+  height: auto;
+  border-radius: 0%;
+}
+
+@media (max-width: 800px) {
+  .flexbox {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    overflow-y: scroll;
+
+  }
+
+  .flexbox>div {
+    background-color: none;
+    width: 90vw;
+    justify-content: center;
+  }
+
+  .flexbox img {
+    width: 20vw;
+    height: auto;
+    align-self: center;
+  }
+
+  .overlay h1,
+  h2,
+  h3 {
+    font-size: medium;
+    text-align: center;
+  }
+
+  .overlay p {
+    font-size: medium;
+    text-align: left;
+  }
+}
+
+#o3con {
+  width: 90%;
+  height: 90%;
+  /* font-size: 50px;
+  color: white; */
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  overflow-y: scroll;
+}
+
+#o4con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  line-height: .05vh;
+  letter-spacing: .1vh;
+}
+
+.veil {
+  font-size: .28vh;
+}
+
+.veil>p {
+  font-size: 1.50vh;
+  letter-spacing: .15vh;
+}
+
+#eternalhash {
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+#o5con {
+  width: 90%;
+  height: 90%;
+  /* font-size: 50px;
+  color: white; */
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  overflow-y: scroll;
+}
+
+.o5img {
+  position: absolute;
+  top: 25vh;
+  width: auto;
+  max-width: 95vw;
+  height: 70vh;
+  max-height: 95vw;
+  align-self: center;
+  justify-self: center;
+}
+
+#o6con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* font-size: 50px;
+  color: white; */
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#o7con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* font-size: 50px; */
+  color: white;
+  font-size: 20vh;
+  font-weight: bold;
+  /* text-shadow: 1px 1px 2px #000000; */
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+}
