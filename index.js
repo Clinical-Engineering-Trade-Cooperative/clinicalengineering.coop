@@ -51,3 +51,14 @@ function off(d){
     document.getElementById("o7").style.display = "none";
   }
 }
+
+function offAll(){
+  off(0)
+  off(1)
+  off(2)
+  off(3)
+  off(4)
+  off(5)
+  off(6)
+  off(7)
+}
